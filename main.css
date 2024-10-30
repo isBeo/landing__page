@@ -10,25 +10,113 @@
 header{
     background-color: var(--darkbg);
     color:white;
+    display: flex;
+    justify-content: space-between;
 }
 
 h1{
-    text-align: center;
     font-size: 2.8em;
+    align-items: center;
     padding:20px;
     display: flex;
     gap:30px;
 }
-nav li{
-    font-size: 1.3em;
-    padding:20px;
+.toggle__menu{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
 }
-nav a{
-    color:inherit;
+.toggle__menu span{
+    background-color: #fff;
+    height: 4px;
+    width: 100%;
+    transition: all .5s ease;
+}
+.toggle__menu.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px, 13px);
+    background-color: red;
+}
+.toggle__menu.active span:nth-child(2){
+    opacity:0;
+}
+.toggle__menu.active span:nth-child(3){
+    transform: rotate(-45deg) translate(5px,-13px);
+    background-color: red;
+}
+nav{
+    padding:10px 20px;
+    background-color:#1f2937;
+    height: 100%;
+    /* width: 80vw; */
+    /* display: flex; */
+}
+
+nav ul{
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    transition: all .225s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateX(-100%);
+}
+nav ul:active{
+    width: 100%;   
+}
+nav ul li{
+    padding: 20px;
+    margin:10px
+}
+nav ul li a{
+    color:white;
+    font-size: 1.3em;
+    font-weight: bold;
     text-decoration: none;
 }
-nav a:hover{
-    text-decoration: underline;
+.menu__toggle{
+    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 24px;
+
+}
+.menu__toggle span{
+    display: block;
+    width: 100%;
+    margin:2px;
+    height: 2px;
+    background-color: #c90909;
+    transition:all .3s ease;
+}
+.menu__toggle.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px,5px);
+
+}
+.menu__toggle.active span:nth-child(2){
+    opacity: 0;
+}
+.menu__toggle.active span:nth-child(3){
+    transform: rotate(45deg) translate(5px,5px);
+
+}
+/* nav ul{
+    list-style: none;
+    display: none;
+    margin: 0;padding: 0;
+
+} */
+.menu li{
+    margin: 0 10px;
+}
+
+.menu a{
+    color:rgb(170, 4, 4);
+    text-decoration: none;
 }
 .hero{
     display: flex;
@@ -72,3 +160,19 @@ nav a:hover{
     position: relative;
 }
 
+@media (max-width:768px){
+    .menu{
+        display:none;
+        flex-direction: column;
+
+    }
+    .menu-toggle{
+        display: flex;
+
+    }
+    .menu-active{
+        display: flex;
+        transform: translateX(0);
+
+    }
+}
