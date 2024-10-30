@@ -52,6 +52,7 @@ nav{
     padding:10px 20px;
     background-color:#1f2937;
     height: 100%;
+
     /* width: 80vw; */
     /* display: flex; */
 }
@@ -63,9 +64,12 @@ nav ul{
     transition: all .225s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: translateX(-100%);
 }
-nav ul:active{
+/* nav ul:active{
     width: 100%;   
-}
+    height: 100%;
+    background-color: #fff;
+
+} */
 nav ul li{
     padding: 20px;
     margin:10px
@@ -173,6 +177,5 @@ nav ul li a{
     .menu-active{
         display: flex;
         transform: translateX(0);
-
     }
 }
