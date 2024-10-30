@@ -19,10 +19,18 @@ h1{
 }
 nav li{
     font-size: 1.3em;
+    padding:20px;
 }
 nav a{
     color:inherit;
     text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.hero{
+    display: flex;
+    flex-direction: column-reverse;
 }
 .text{
     display: flex;
@@ -30,9 +38,6 @@ nav a{
     gap: 20px;
     background-color: var(--darkbg);
     color:white;
-    position:absolute;
-    top:70%;
-    z-index: 2;
 }
 .text h2{
     font-size: 1.7em;
@@ -41,6 +46,8 @@ nav a{
 }
 .text p{
     padding: 5px;
+    text-align: justify;
+    padding-inline: 15px;
     font-size: 1.1em;
 }
  
